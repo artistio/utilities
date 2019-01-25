@@ -10,6 +10,9 @@
 # URL:      https://thamaraiselvam.com
 #
 
+# Adding Universe Repo
+echo -e "\nAdding Universe Repo\n"
+add-apt-repository universe
 
 #updating packages
 echo -e "\nUpdating package lists..\n"
