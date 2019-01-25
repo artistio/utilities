@@ -22,7 +22,7 @@ Notes:
 
 This script is cloned from [LEMP-Installer](https://github.com/thamaraiselvam/LEMP-Installer)
 
-## lemp.sh
+## createdb.sh
 
 Script to create MySQL database and user.
 
