@@ -33,3 +33,13 @@ Steps:
 Notes:
 1. The database name, username and password will be created randomly
 2. These credentials are available in file `env.db` after script completion
+
+## installcomposer.sh
+
+Script to install composer.
+
+Steps:
+1. Run script `installcomposer.sh`
+
+Notes:
+1. Composer will be installed in current working directory
