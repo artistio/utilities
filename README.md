@@ -12,8 +12,6 @@ Steps:
 2. `cd utilities`
 3. vagrant up
 
-That's it :)
-
 Notes:
 1. MySQL
    1. Version installed: Latest version in the OS repository
@@ -23,3 +21,15 @@ Notes:
 
 
 This script is cloned from [LEMP-Installer](https://github.com/thamaraiselvam/LEMP-Installer)
+
+## lemp.sh
+
+Script to create MySQL database and user.
+
+Steps:
+1. Install MySQL
+2. Run script `createdb.sh`
+
+Notes:
+1. The database name, username and password will be created randomly
+2. These credentials are available in file `env.db` after script completion
