@@ -13,6 +13,15 @@
 # Configuration Variable
 PHP_VERSION=7.2
 
+# Setting up Swap Space
+# Add check before commit to GIT!!!!!!!!!!!!!!!!!!!!!!!!!!
+echo -e "\nSetting up swapfile\n"
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile   none    swap    sw    0   0" /etc/fstab
+
 # Adding Universe Repo
 echo -e "\nAdding Repos\n"
 add-apt-repository -y ppa:ondrej/php
