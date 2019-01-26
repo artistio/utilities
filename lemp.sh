@@ -40,8 +40,8 @@ echo "MySQL Root Password is $MYPASS" > ~/mysqlrootPLEASEDELETE.txt
 
 #install PHP and extensions
 echo -e "\nInstalling PHP and extension for PHP...\n"
-apt-get -y install php$PHP_VERSION php$PHP_VERSION-mysql php$PHP_VERSION-cli
-apt-get -y install php$PHP_VERSION-fpm php$PHP_VERSION-xml php$PHP_VERSION-gd
+apt-get -y install php$PHP_VERSION-fpm php$PHP_VERSION-mysql
+apt-get -y install php$PHP_VERSION-cli php$PHP_VERSION-xml php$PHP_VERSION-gd
 apt-get -y install php$PHP_VERSION-opcache php$PHP_VERSION-mbstring
 
 #install PHP and extensions
@@ -63,9 +63,11 @@ server {
 
     ssl_certificate /etc/nginx/ssl/localhost/localhost.crt;
     ssl_certificate_key /etc/nginx/ssl/localhost/localhost.key;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files \$uri \$uri/ =404;
     }
 
     location ~ \.php$ {
